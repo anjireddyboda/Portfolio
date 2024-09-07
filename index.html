@@ -6,56 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Anji Reddy's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .header img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid #333;
-        }
-
-        .header h1 {
-            margin: 20px 0 10px;
-            font-size: 3em;
-        }
-
-        .header p {
-            font-size: 1.2em;
-            color: #666;
+            color: #333;
+            background-color: #f4f4f4;
         }
 
         nav {
-            background-color: #333;
-            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(51, 51, 51, 0.9);
+            color: #fff;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+
+        nav.scrolled {
+            background: #333;
         }
 
         nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
             display: flex;
             justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li {
@@ -65,32 +47,70 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            font-weight: 700;
             font-size: 1.1em;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #00aaff;
+        }
+
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 0;
         }
 
         .section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #fff;
+            background: #fff;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .section h2 {
-            margin-bottom: 20px;
             font-size: 2.5em;
-            border-bottom: 3px solid #f4f4f4;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00aaff;
             padding-bottom: 10px;
             color: #333;
         }
 
         .section ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .section ul li {
@@ -98,29 +118,64 @@
             font-size: 1.2em;
         }
 
+        .contact-info {
+            background: #00aaff;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #ffd700;
+        }
+
         .footer {
+            background: #333;
+            color: #fff;
             text-align: center;
             padding: 15px 0;
-            background-color: #333;
-            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
         .footer p {
             margin: 0;
         }
 
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
             }
 
             .section h2 {
@@ -135,7 +190,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav id="navbar">
         <ul>
             <li><a href="#objective">Objective</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -146,15 +201,22 @@
             <li><a href="#interests">Interests</a></li>
             <li><a href="#activities">Activities</a></li>
             <li><a href="#languages">Languages</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <div class="hero">
+        <h1>Boda Anji Reddy</h1>
+        <p>Mechanical Engineering Student | Project Enthusiast | Researcher</p>
+    </div>
+
     <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <img src="profile-new.jpg" alt="Boda Anji Reddy Photo">
-            <h1>Boda Anji Reddy</h1>
-            <p>Mechanical Engineering Student | Project Enthusiast | Researcher</p>
+        <!-- Contact Section -->
+        <div class="contact-info" id="contact">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> <a href="mailto:anjireddyboda83@gmail.com">anjireddyboda83@gmail.com</a></p>
+            <p><strong>Phone:</strong> +91 8367463908</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anjireddyboda" target="_blank">linkedin.com/in/anjireddyboda</a></p>
         </div>
 
         <!-- Objective Section -->
@@ -204,50 +266,12 @@
             <h2>Projects</h2>
             <ul>
                 <li><strong>Mechanically Operated Floor Cleaning Machine</strong>: Innovated a manual power transmission system using chain and sprocket mechanisms for energy-efficient operation.</li>
-                <li><strong>Sustainable Energy From Waste Water And Rain Water</strong>: Developed a sustainable energy project focusing on converting waste water and rainwater into electricity.</li>
+                <li><strong>Sustainable Energy From Waste Water And Rain Water</strong>: Designed a system to harness energy from waste and rainwater, demonstrating an understanding of sustainable practices.</li>
             </ul>
         </div>
 
-        <!-- Achievements & Awards Section -->
+        <!-- Achievements Section -->
         <div class="section" id="achievements">
-            <h2>Achievements & Awards</h2>
+            <h2>Achievements</h2>
             <ul>
-                <li>Received the Best Student Award at Government Polytechnic Chegunta.</li>
-            </ul>
-        </div>
-
-        <!-- Interests Section -->
-        <div class="section" id="interests">
-            <h2>Interests</h2>
-            <ul>
-                <li>Making projects</li>
-                <li>Research Enthusiast</li>
-            </ul>
-        </div>
-
-        <!-- Activities Section -->
-        <div class="section" id="activities">
-            <h2>Activities</h2>
-            <ul>
-                <li>President Digital Manufacturing Club</li>
-                <li>R&D Member Anurag University Iucee student chapter</li>
-            </ul>
-        </div>
-
-        <!-- Languages Section -->
-        <div class="section" id="languages">
-            <h2>Languages</h2>
-            <ul>
-                <li>English</li>
-                <li>Telugu</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer">
-        <p>&copy; 2024 Boda Anji Reddy. All rights reserved.</p>
-    </div>
-</body>
-
-</html>
+                <li>Received appreciation for
