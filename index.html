@@ -5,216 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda Anji Reddy | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:300,400,500,700" rel="stylesheet">
+    <title>Boda Anji Reddy's Portfolio</title>
     <style>
-        /* Global Styles */
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             background-color: #f4f4f4;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            width: 85%;
+            width: 80%;
             margin: 0 auto;
-            padding: 20px 0;
+            padding: 20px;
         }
 
-        /* Header and Navigation */
-        header {
-            background: #3a3a3a;
-            color: white;
+        .header {
+            text-align: center;
             padding: 30px 0;
-            text-align: center;
-            position: relative;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 48px;
-            font-weight: 700;
-        }
-
-        header p {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-
-        header a {
-            color: #ffdd57;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav {
-            background: #ffdd57;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #333;
-            padding: 15px 20px;
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        nav a:hover {
-            background-color: #333;
-            color: #ffdd57;
-            transition: 0.3s;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 50px 0;
-            background-color: #e0e0e0;
-            text-align: center;
-        }
-
-        .hero img {
-            width: 200px;
-            height: 200px;
+        .header img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border: 4px solid #333;
         }
 
-        .hero h2 {
-            font-size: 36px;
-            margin: 20px 0;
+        .header h1 {
+            margin: 20px 0 10px;
+            font-size: 2.5em;
         }
 
-        .hero p {
-            font-size: 20px;
+        .header p {
+            font-size: 1.2em;
             color: #666;
         }
 
-        /* Sections */
-        section {
-            background: white;
-            padding: 30px;
-            margin: 30px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: #333;
-            border-bottom: 3px solid #ffdd57;
-            display: inline-block;
-            padding-bottom: 5px;
+        .section h2 {
             margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 10px;
+            color: #333;
         }
 
-        ul {
+        .section ul {
             list-style-type: none;
             padding: 0;
         }
 
-        ul li {
-            margin-bottom: 15px;
-            line-height: 1.6;
+        .section ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
         }
 
-        /* Footer */
-        footer {
+        .footer {
             text-align: center;
-            padding: 20px 0;
-            background: #333;
-            color: white;
-            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
         }
 
-        footer a {
-            color: #ffdd57;
+        .footer p {
+            margin: 0;
+        }
+
+        a {
+            color: #0066cc;
             text-decoration: none;
         }
 
-        footer a:hover {
+        a:hover {
             text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-
-            header h1 {
-                font-size: 36px;
-            }
-
-            nav a {
-                padding: 10px;
-                font-size: 14px;
-            }
-
-            .hero img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .hero h2 {
-                font-size: 28px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Header Section -->
-    <header>
-        <h1>Boda Anji Reddy</h1>
-        <p>+91 8367463908 | <a href="mailto:anjireddy.boda83@gmail.com">anjireddy.boda83@gmail.com</a> | <a href="https://www.linkedin.com/in/anjireddyboda" target="_blank">LinkedIn</a></p>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="#objective">Objective</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <!-- Replace 'profile.jpg' with your photo file name -->
-        <img src="profile.jpg" alt="Boda Anji Reddy Photo">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Mechanical Engineering Student | Project Enthusiast | Researcher</p>
-    </div>
-
-    <!-- Main Content -->
     <div class="container">
-        <section id="objective">
-            <h2>Objective</h2>
-            <p>To secure a challenging position where I can utilize my skills, experience, and education to further develop professionally and contribute to meaningful projects or initiatives.</p>
-        </section>
+        <!-- Header Section -->
+        <div class="header">
+            <img src="profile-new.jpg" alt="Boda Anji Reddy Photo">
+            <h1>Boda Anji Reddy</h1>
+            <p>Mechanical Engineering Student | Project Enthusiast | Researcher</p>
+        </div>
 
-        <section id="experience">
+        <!-- Objective Section -->
+        <div class="section">
+            <h2>Objective</h2>
+            <p>To secure a challenging position where I can utilize my skills, experience, and education to further
+                develop professionally and contribute to meaningful projects or initiatives.</p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
             <h2>Experience</h2>
             <ul>
-                <li><strong>Internship at Geokay Wires Private Limited</strong> (1st June 2022 - 26th Nov 2022)
+                <li><strong>Internship at Geekay Wires Private Limited (1st June 2022 - 26th Nov 2022)</strong>
                     <ul>
                         <li>Operated sorting machines efficiently to accurately sort nails based on predefined criteria.</li>
                         <li>Maintained detailed records of sorting activities and performance metrics to track efficiency and identify areas for improvement.</li>
@@ -222,42 +120,78 @@
                     </ul>
                 </li>
             </ul>
-        </section>
+        </div>
 
-        <section id="education">
+        <!-- Education Section -->
+        <div class="section">
             <h2>Education</h2>
             <ul>
-                <li><strong>Anurag University</strong> (2023-2026): BTech in Mechanical Engineering</li>
-                <li><strong>Government Polytechnic Chegunta</strong> (2020-2023): Diploma in Mechanical Engineering (8.82 CGPA)</li>
-                <li><strong>Sri Siddhartha High School</strong> (2020): SSC (9.8 CGPA)</li>
+                <li><strong>Anurag University (2023-2026)</strong>: BTech in Mechanical Engineering</li>
+                <li><strong>Government Polytechnic Chegunta (2020-2023)</strong>: Diploma in Mechanical Engineering, 8.82 CGPA</li>
+                <li><strong>Sri Siddhartha High School (2020)</strong>: SSC, 9.8 CGPA</li>
             </ul>
-        </section>
+        </div>
 
-        <section id="skills">
+        <!-- Skills Section -->
+        <div class="section">
             <h2>Skills</h2>
             <ul>
                 <li>Teamwork and collaboration</li>
                 <li>Time Management</li>
-                <li>Record Keeping</li>
+                <li>Record keeping</li>
                 <li>Adaptability</li>
             </ul>
-        </section>
+        </div>
 
-        <section id="projects">
+        <!-- Projects Section -->
+        <div class="section">
             <h2>Projects</h2>
             <ul>
-                <li><strong>Mechanically Operated Floor Cleaning Machine:</strong> Innovated a manual power transmission system using chain and sprocket mechanisms for energy-efficient operation.</li>
-                <li><strong>Sustainable Energy From Waste Water and Rain Water:</strong> Developed and implemented a sustainable energy project focusing on converting wastewater and rainwater into electricity.</li>
+                <li><strong>Mechanically Operated Floor Cleaning Machine</strong>: Innovated a manual power transmission system using chain and sprocket mechanisms for energy-efficient operation.</li>
+                <li><strong>Sustainable Energy From Waste Water And Rain Water</strong>: Developed a sustainable energy project focusing on converting waste water and rainwater into electricity.</li>
             </ul>
-        </section>
+        </div>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
-            <p>Email: <a href="mailto:anjireddy.boda83@gmail.com">anjireddy.boda83@gmail.com</a></p>
-        </section>
+        <!-- Achievements & Awards Section -->
+        <div class="section">
+            <h2>Achievements & Awards</h2>
+            <ul>
+                <li>Received the Best Student Award at Government Polytechnic Chegunta.</li>
+            </ul>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="section">
+            <h2>Interests</h2>
+            <ul>
+                <li>Making projects</li>
+                <li>Research Enthusiast</li>
+            </ul>
+        </div>
+
+        <!-- Activities Section -->
+        <div class="section">
+            <h2>Activities</h2>
+            <ul>
+                <li>President Digital Manufacturing Club</li>
+                <li>R&D Member Anurag University Iucee student chapter</li>
+            </ul>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="section">
+            <h2>Languages</h2>
+            <ul>
+                <li>English</li>
+                <li>Telugu</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Boda Anji Reddy. All Rights Reserved. | This site is <a href="https://github.com/yourusername/yourusername.github.io" target="_blank">
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Boda Anji Reddy. All rights reserved.</p>
+    </div>
+</body>
+
+</html>
