@@ -6,72 +6,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Anji Reddy | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:300,400,500,700" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         .container {
-            width: 80%;
+            width: 85%;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 0;
         }
 
+        /* Header and Navigation */
         header {
-            background-color: #333;
+            background: #3a3a3a;
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 48px;
+            font-weight: 700;
         }
 
         header p {
+            margin: 10px 0;
             font-size: 18px;
-            margin: 5px 0;
         }
 
         header a {
             color: #ffdd57;
             text-decoration: none;
+            font-weight: bold;
         }
 
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
+            background: #ffdd57;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
-            color: white;
+            color: #333;
             padding: 15px 20px;
             text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
         }
 
         nav a:hover {
-            background-color: #ffdd57;
-            color: #333;
+            background-color: #333;
+            color: #ffdd57;
+            transition: 0.3s;
         }
 
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 50px 0;
+            background-color: #e0e0e0;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+        }
+
+        /* Sections */
         section {
             background: white;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 30px;
+            margin: 30px 0;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
             color: #333;
+            border-bottom: 3px solid #ffdd57;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
         }
 
         ul {
@@ -80,9 +125,11 @@
         }
 
         ul li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
 
+        /* Footer */
         footer {
             text-align: center;
             padding: 20px 0;
@@ -99,16 +146,47 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 36px;
+            }
+
+            nav a {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .hero img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
+    <!-- Header Section -->
     <header>
         <h1>Boda Anji Reddy</h1>
-        <p>+91 8367463908 | anjireddy.boda83@gmail.com | <a href="https://www.linkedin.com/in/anjireddyboda" target="_blank">LinkedIn</a></p>
+        <p>+91 8367463908 | <a href="mailto:anjireddy.boda83@gmail.com">anjireddy.boda83@gmail.com</a> | <a href="https://www.linkedin.com/in/anjireddyboda" target="_blank">LinkedIn</a></p>
     </header>
 
+    <!-- Navigation -->
     <nav>
         <a href="#objective">Objective</a>
         <a href="#experience">Experience</a>
@@ -118,6 +196,15 @@
         <a href="#contact">Contact</a>
     </nav>
 
+    <!-- Hero Section -->
+    <div class="hero">
+        <!-- Replace 'profile.jpg' with your photo file name -->
+        <img src="profile.jpg" alt="Boda Anji Reddy Photo">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Mechanical Engineering Student | Project Enthusiast | Researcher</p>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
         <section id="objective">
             <h2>Objective</h2>
@@ -171,10 +258,6 @@
         </section>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Boda Anji Reddy. All Rights Reserved. | This site is <a href="https://github.com/yourusername/yourusername.github.io" target="_blank">open source</a>.</p>
-    </footer>
-
-</body>
-
-</html>
+        <p>&copy; 2024 Boda Anji Reddy. All Rights Reserved. | This site is <a href="https://github.com/yourusername/yourusername.github.io" target="_blank">
