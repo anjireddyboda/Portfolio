@@ -57,7 +57,7 @@
         }
 
         .hero {
-            background: url('hero-bg.jpg') no-repeat center center/cover;
+            background: url('profile-photo.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -68,13 +68,21 @@
             padding: 0 20px;
         }
 
+        .hero img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
         .hero h1 {
-            font-size: 4em;
+            font-size: 3em;
             margin: 0;
         }
 
         .hero p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin-top: 10px;
         }
 
@@ -206,6 +214,8 @@
     </nav>
 
     <div class="hero">
+        <!-- Replace 'profile-photo.jpg' with the actual path to your profile photo -->
+        <img src="profile-photo.jpg" alt="Boda Anji Reddy">
         <h1>Boda Anji Reddy</h1>
         <p>Mechanical Engineering Student | Project Enthusiast | Researcher</p>
     </div>
@@ -271,3 +281,43 @@
 
         <!-- Achievements Section -->
         <div class="section" id="achievements">
+            <h2>Achievements & Awards</h2>
+            <ul>
+                <li>Received the Best Student Award at Government Polytechnic Chegunta.</li>
+            </ul>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="section" id="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li>Making projects</li>
+                <li>Research</li>
+            </ul>
+        </div>
+
+        <!-- Activities Section -->
+        <div class="section" id="activities">
+            <h2>Activities</h2>
+            <ul>
+                <li>President, Digital Manufacturing Club - CRDM</li>
+                <li>R&D Member, Anurag University Lucee Student Chapter</li>
+            </ul>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="section" id="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>English</li>
+                <li>Telugu</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Boda Anji Reddy. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
